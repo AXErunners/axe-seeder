@@ -356,8 +356,8 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"static-dnsseed.axerunners.com", "static-dnsseed.axecoin.io", ""};
-static const string testnet_seeds[] = {"static-testnet-seed.axerunners.com", "static-testnet-seed.axecoin.io", ""};
+static const string mainnet_seeds[] = {"static-monolith.axerunners.com", "static-dnsseed.axerunners.com", ""};
+static const string testnet_seeds[] = {"static-testnet-seed.axerunners.com", "static-testnet-seed.axerunners.com", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
