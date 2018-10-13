@@ -1,13 +1,14 @@
-# axe-seeder
+axe-seeder
+==============
 
-axe-seeder is a crawler for the Axe network, which exposes a list
+AXE-seeder is a crawler for the AXE network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
 * regularly revisits known nodes to check their availability
 * bans nodes after enough failures, or bad behaviour
-* accepts nodes down to v1.0.1 to request new IP addresses from,
-  but only reports good post-v1.0.1 nodes.
+* accepts nodes down to v0.9.11.5 to request new IP addresses from,
+  but only reports good post-v0.9.11.5 nodes.
 * keeps statistics over (exponential) windows of 2 hours, 8 hours,
   1 day and 1 week, to base decisions on.
 * very low memory (a few tens of megabytes) and cpu requirements.
@@ -35,7 +36,7 @@ On the system vps.example.com, you can now run dnsseed:
 ./dnsseed -h dnsseed.example.com -n vps.example.com
 
 If you want the DNS server to report SOA records, please provide an
-e-mailadres (with the @ part replaced by .) using -m.
+e-mail address (with the @ part replaced by .) using -m.
 
 COMPILING
 ---------
