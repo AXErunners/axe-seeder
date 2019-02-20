@@ -432,8 +432,12 @@ static const string testnet_seeds[] = {"static-testnet-seed.axerunners.com", "st
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  if (!fTestNet){
-    // db.Add(CService("0313370.xyz", 9937), true);
+  // When all seeders are down we need some reliable nodes to get initial addresses from.
+  // Uncomment corresponding line and replace "some...ip" string with an IP of a good peer.
+  if (fTestNet) {
+    // db.Add(CService("sometestnnetnodeip", 19937), true);
+  } else {
+    // db.Add(CService("somemainnnetnodeip", 9937), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
