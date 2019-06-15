@@ -80,7 +80,7 @@ class CNode {
     CAddress me(CService("0.0.0.0"));
     BeginMessage("version");
     int nBestHeight = GetRequireHeight();
-    string ver = "/axe-seeder:1.2.0/";
+    string ver = "/axe-seeder:1.2.1/";
     bool fRelay = false;
     vSend << PROTOCOL_VERSION << nLocalServices << nTime << you << me << nLocalNonce << ver << nBestHeight << fRelay;
     EndMessage();
